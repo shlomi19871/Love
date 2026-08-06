@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אהבת חינם - חזון של אחדות, עשייה ותקווה</title>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Secular+One&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #d69e2e;
+            --bg-light: #f7fafc;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --white: #ffffff;
+            
+            /* צבע רקע המותאם מדויק לשוליים של התמונה העליונה */
+            --image-bg-color: #fcfcfc; 
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Heebo', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* תפריט ניווט */
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 1.2rem;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            display: inline-block;
+            padding: 0.5rem 0;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        /* כותרת ראשית עם קו דק */
+        header {
+            background-color: var(--image-bg-color);
+            text-align: center;
+            padding: 2rem 1rem;
+            position: relative;
+            border-bottom: 2px solid var(--secondary-color); 
+        }
+
+        .main-logo-wrapper {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .main-logo-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: none;
+            outline: none;
+            background-color: var(--image-bg-color);
+            box-shadow: none; 
+        }
+
+        /* סגנון לטקסט הראשון - חרדל-זהב כהה */
+        .slogan-mustard {
+            color: var(--secondary-color); 
+            font-size: 1.8rem; 
+            font-weight: 700; 
+            margin-top: 1rem;
+            margin-bottom: 0.5rem; 
+        }
+
+        /* סגנון לטקסט השני - כחול */
+        .slogan-blue {
+            color: var(--primary-color); 
+            font-size: 1.4rem; 
+            font-weight: 500; 
+            margin-bottom: 1.5rem; 
+        }
+
+        .party-logo {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 160px;
+            height: auto;
+            display: block;
+            border: none;
+            outline: none;
+            background: transparent;
+            z-index: 2;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* אזור פס החזון (CTA) עם גופן Secular One לכותרת */
+        .cta-banner {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            text-align: center;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .cta-title {
+            font-family: 'Secular One', sans-serif;
+            font-size: 3rem;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .gif-banner {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gif-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gif-overlay-text {
+            position: absolute;
+            top: 10%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 85%;
+            text-align: center;
+            color: var(--primary-color);
+            font-weight: 900;
+            font-size: 2.7rem;
+            line-height: 1.45;
+            text-shadow: 0 2px 8px rgba(255,255,255,0.6), 0 0 4px rgba(255,255,255,0.5);
+        }
+
+        .gif-overlay-emphasis {
+            display: inline-block;
+            font-size: 1.25em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: var(--white);
+            padding: 2rem 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 3px solid var(--primary-color);
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-icon-img {
+            width: 72px;
+            height: 72px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto 1rem;
+            border: none;
+            outline: none;
+            background: transparent;
+        }
+
+        .value-card h3 {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+
+        .value-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .section-divider {
+            border: none;
+            border-top: 2px solid rgba(26, 54, 93, 0.12);
+            margin: 4rem 0;
+        }
+
+        .join-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .join-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            border-top: 3px solid var(--secondary-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .join-card h3 {
+            font-size: 1.35rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .join-card p {
+            font-size: 0.98rem;
+            color: var(--text-light);
+            flex-grow: 1;
+            margin-bottom: 1.75rem;
+        }
+
+        .join-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            padding: 0.85rem 1.5rem;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+            align-self: center;
+        }
+
+        .join-button:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* סגנון לפוטר המורחב עם קו עליון דק ועדין */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 1.5rem; 
+            margin-top: 3rem;
+            border-top: 2px solid var(--secondary-color);
+        }
+
+        .footer-text {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 2rem; 
+        }
+
+        /* עיצוב כרטיס נקי לתמונה על גבי הרקע הכחול */
+        .footer-card {
+            background-color: var(--white);
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 4px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .footer-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 2rem 1rem; }
+            nav a { margin: 0 0.5rem; font-size: 1rem; }
+            .gif-overlay-text { font-size: 1.5rem; }
+            .cta-title { font-size: 1.8rem; }
+            .party-logo { width: 95px; top: 0.5rem; right: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- תפריט ניווט -->
+    <nav>
+        <a href="index.html" class="active">דף הבית</a>
+        <a href="about.html">אודות</a>
+        <a href="plan.html">תכנית שלנו</a>
+        <a href="contact.html">צרו קשר</a>
+    </nav>
+
+    <header>
+        <img src="https://i.ibb.co/FkNz9xTN/Chat-GPT-Image-Aug-6-2026-11-00-31-AM.png" alt="לוגו אהבת חינם" class="party-logo">
+        <div class="main-logo-wrapper">
+            <img src="https://i.ibb.co/LDtyJNsw/Chat-GPT-Image-Aug-5-2026-06-24-34-PM.png" alt="אהבת חינם - חזון של אחדות, עשייה ותקווה" class="main-logo-image">
+            
+            <!-- הטקסט הראשון (חרדל-זהב כהה) -->
+            <p class="slogan-mustard">אחדות. ערבות הדדית. גאולה</p>
+            
+            <!-- הטקסט השני (כחול) -->
+            <p class="slogan-blue">עם אחד - לב אחד - עתיד אחד.</p>
+
+            <h1 class="sr-only">אהבת חינם - חזון של אחדות, עשייה ותקווה</h1>
+        </div>
+    </header>
+
+    <!-- אזור החזון עם גופן Secular One לכותרת -->
+    <div class="cta-banner">
+        <div class="cta-title">חזון של אחדות, עשייה ותקווה</div>
+    </div>
+
+    <div class="gif-banner" id="gifBanner">
+        <img src="https://i.ibb.co/zV8ZSF09/image.gif" alt="אהבת חינם" class="gif-image" id="gifImage">
+        <div class="gif-overlay-text">אנחנו מאמינים שישראל יכולה להיות<br>מדינה טובה יותר כשאנחנו בוחרים<br><span class="gif-overlay-emphasis">באהבה, בכבוד, בערבות הדדית<br>ובאחריות כלפי הזולת.</span></div>
+    </div>
+
+    <script>
+        // חותך את ה-GIF ומציג רק פס אמצעי: מתחיל קצת לפני הדגל (בלי השמיים),
+        // ומסתיים בערך בגובה הישבן (בלי הרגליים)
+        (function () {
+            const banner = document.getElementById('gifBanner');
+            const img = document.getElementById('gifImage');
+
+            // אחוזים מגובה התמונה המקורית - אפשר לכוונן
+            const TOP_CUT = 0.22;    // כמה חותכים מלמעלה (שמיים)
+            const BOTTOM_CUT = 0.68; // עד כאן משאירים (68% מהגובה = בערך גובה הישבן)
+
+            function cropBand() {
+                if (!img.naturalWidth || !img.naturalHeight) return;
+                const ratio = img.naturalHeight / img.naturalWidth;
+                const fullHeight = banner.offsetWidth * ratio;
+
+                img.style.height = fullHeight + 'px';
+                img.style.top = (-fullHeight * TOP_CUT) + 'px';
+                banner.style.height = (fullHeight * (BOTTOM_CUT - TOP_CUT)) + 'px';
+            }
+
+            if (img.complete) {
+                cropBand();
+            } else {
+                img.addEventListener('load', cropBand);
+            }
+            window.addEventListener('resize', cropBand);
+        })();
+    </script>
+
+    <main class="container">
+        <!-- הכותרת לאזור הערכים -->
+        <h2 class="section-title" id="values">ביחד נבנה עתיד טוב יותר - באהבה חינם</h2>
+        
+        <div class="values-grid">
+            
+            <div class="value-card">
+                <img src="https://i.ibb.co/MyF7cHCv/image.png" alt="ערבות הדדית" class="value-icon-img">
+                <h3>ערבות הדדית</h3>
+                <p>נחזק את הקהילה, נעזור לחלשים ונשים את האדם במרכז.</p>
+            </div>
+
+            <div class="value-card">
+                <img src="https://i.ibb.co/bRJmH6yr/image.png" alt="אחדות העם" class="value-icon-img">
+                <h3>אחדות העם</h3>
+                <p>נחבר בין כל חלקי החברה, מתוך כבוד, הקשבה והבנה.</p>
+            </div>
+
+            <div class="value-card">
+                <img src="https://i.ibb.co/9mSLrwdP/image.png" alt="חיזוק המשפחה" class="value-icon-img">
+                <h3>חיזוק המשפחה</h3>
+                <p>נשקיע בחינוך, נעמוד לצד ההורים ונבנה עתיד בטוח לדורות הבאים.</p>
+            </div>
+
+            <div class="value-card">
+                <img src="https://i.ibb.co/hJSQt26F/image.png" alt="ממשל נקי ושקוף" class="value-icon-img">
+                <h3>ממשל נקי ושקוף</h3>
+                <p>נפעל ביושר, בנאמנות ובשקיפות מלאה למען הציבור.</p>
+            </div>
+
+            <div class="value-card">
+                <img src="https://i.ibb.co/tMd8F3cH/image.png" alt="צמיחה והזדמנויות" class="value-icon-img">
+                <h3>צמיחה והזדמנויות</h3>
+                <p>נעודד יזמות, תעסוקה וחינוך למצוינות, לכל אזרח.</p>
+            </div>
+
+        </div>
+
+        <hr class="section-divider">
+
+        <h2 class="section-title">כדי לבנות את העתיד, אנחנו צריכים אותך איתנו:</h2>
+
+        <div class="join-grid">
+
+            <div class="join-card">
+                <h3>בואו להיות חלק מהעשייה</h3>
+                <p>מטה השטח מחבר בין האנשים לעשייה. עם פריסה ארצית של מטות, קהילות ועשרות אלפי פעילים, אנו מקדמים את ערכי המפלגה באמצעות פעילות בשכונות, מפגשי תושבים, כנסים, התנדבות ואירועים ברחבי הארץ.</p>
+                <a href="#" class="join-button">אשמח לקחת חלק</a>
+            </div>
+
+            <div class="join-card">
+                <h3>להישאר מעודכנים</h3>
+                <p>כל העדכונים החשובים במקום אחד, חדשות מהכנסת, פעילות המפלגה, אירועים ועדכונים בלעדיים, ישירות מהמקור.</p>
+                <a href="#" class="join-button">הרשמה לעדכונים</a>
+            </div>
+
+            <div class="join-card">
+                <h3>הצטרף לשינוי העתיד</h3>
+                <p>יחד נפעל לבניית עתיד טוב יותר, שיקום וחיזוק החברה, שיפור מערכת הבריאות, חיזוק המשפחה, קידום כלכלה יציבה והוגנת, וממשל שקוף, אמין וקשוב לציבור.</p>
+                <a href="#" class="join-button">הצטרפו עכשיו</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- אזור הפוטר המורחב שמכיל את הטקסט והתמונה בתוך מלבן כחול מעוצב -->
+    <footer>
+        <div class="footer-text">
+            אהבת חינם – זו הדרך. זה הכוח. זה העתיד שלנו.
+        </div>
+        <div class="footer-card">
+            <img src="https://i.ibb.co/GfmhbmfF/Whats-Ap-p-Image-2026-08-05-at-14-03-05-1.jpg" alt="אהבת חינם" class="footer-image">
+        </div>
+    </footer>
+
+</body>
+</html>
