@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תכנית שלנו - אהבת חינם</title>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Secular+One&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #d69e2e;
+            --bg-light: #f7fafc;
+            --text-dark: #2d3748;
+            --text-light: #718096;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Heebo', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+            display: inline-block;
+            padding: 0.5rem 0;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        .plan-header {
+            background-color: var(--bg-light);
+            text-align: center;
+            padding: 3rem 1.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .plan-title {
+            font-family: 'Secular One', sans-serif;
+            font-size: 2.6rem;
+            color: var(--primary-color);
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .plan-item {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem 2.25rem;
+            margin-bottom: 1.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            border-right: 4px solid var(--secondary-color);
+        }
+
+        .plan-item h2 {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .plan-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .plan-item li {
+            position: relative;
+            padding-right: 1.4rem;
+            margin-bottom: 0.6rem;
+            color: var(--text-dark);
+            font-size: 1.02rem;
+        }
+
+        .plan-item li::before {
+            content: "•";
+            color: var(--secondary-color);
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+        }
+
+        .plan-item li:last-child {
+            margin-bottom: 0;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 1.5rem;
+            margin-top: 3rem;
+            border-top: 2px solid var(--secondary-color);
+        }
+
+        .footer-text {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 2rem; 
+        }
+
+        .footer-card {
+            background-color: var(--white);
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 4px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .footer-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 2rem 1rem; }
+            nav a { margin: 0 0.3rem; font-size: 0.95rem; }
+            .plan-title { font-size: 1.9rem; }
+            .plan-item { padding: 1.5rem 1.25rem; }
+            .plan-item h2 { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">דף הבית</a>
+        <a href="about.html">אודות</a>
+        <a href="plan.html" class="active">תכנית שלנו</a>
+        <a href="updates.html">עדכונים</a>
+        <a href="contact.html">צרו קשר</a>
+    </nav>
+
+    <div class="plan-header">
+        <div class="plan-title">התכנית שלנו</div>
+    </div>
+
+    <main class="container">
+        <div class="plan-item">
+            <h2>1. חינוך לאהבת חינם ולאחדות</h2>
+            <ul>
+                <li>תוכנית חינוך ערכית בכל מערכת החינוך: כבוד האדם, הקשבה, סבלנות, אחריות הדדית ופתרון מחלוקות.</li>
+                <li>מפגשים בין מגזרים, הכרת הזהות והתרבות של כל חלקי העם.</li>
+                <li>טיפוח דור של מנהיגות צעירה מתוך שליחות וערכים.</li>
+            </ul>
+        </div>
+
+        <div class="plan-item">
+            <h2>2. חיזוק המשפחה והקהילה</h2>
+            <ul>
+                <li>תמיכה כלכלית אמיתית במשפחות.</li>
+                <li>עידוד חיי המשפחה, ליווי זוגות צעירים והורות.</li>
+                <li>הקמת מרכזי קהילה פעילים בכל יישוב.</li>
+            </ul>
+        </div>
+
+        <div class="plan-item">
+            <h2>3. כלכלה הוגנת וצמיחה לכלל האזרחים</h2>
+            <ul>
+                <li>הורדת יוקר המחיה והקטנת פערים.</li>
+                <li>עידוד יזמות, עסקים קטנים ותעשייה כחול-לבן.</li>
+                <li>כלכלה עם ערכים: הוגנות, שקיפות ומלחמה בשחיתות.</li>
+            </ul>
+        </div>
+
+        <div class="plan-item">
+            <h2>4. ביטחון לאומי ואחדות לאומית</h2>
+            <ul>
+                <li>חיזוק צה"ל וכוחות הביטחון והערכתם.</li>
+                <li>מדיניות חוץ אחראית, חיזוק הבריתות האזוריות.</li>
+                <li>אחדות הפנים – ישראל חזקה מבפנים.</li>
+            </ul>
+        </div>
+
+        <div class="plan-item">
+            <h2>5. חברה מכבדת – מאבק באלימות ושיח מסית</h2>
+            <ul>
+                <li>אפס סובלנות לאלימות פיזית, מילולית ומקוונת.</li>
+                <li>תוכניות מניעה, הסברה ואכיפה.</li>
+                <li>קידום שיח מכבד בתקשורת וברשתות החברתיות.</li>
+            </ul>
+        </div>
+
+        <div class="plan-item">
+            <h2>6. מערכת בריאות נגישה ויעילה</h2>
+            <ul>
+                <li>חיזוק שירותי הבריאות ושיפור זמינות התורים.</li>
+                <li>השקעה בבריאות הנפש, מניעה ורפואה מונעת.</li>
+                <li>צמצום פערים בין מרכז לפריפריה.</li>
+            </ul>
+        </div>
+
+        <div class="plan-item">
+            <h2>7. צדק חברתי ורווחה</h2>
+            <ul>
+                <li>רשת ביטחון חזקה לחלשים, קשישים, ניצולי שואה ואנשים עם מוגבלויות.</li>
+                <li>מאבק בעוני – לא במילים, אלא במעשים.</li>
+                <li>דיור בר השגה לכולם.</li>
+            </ul>
+        </div>
+
+        <div class="plan-item">
+            <h2>8. שיקום ומתמודדים – לא משאירים אף אחד מאחור</h2>
+            <ul>
+                <li>הרחבת הטיפול במכורים, נוער בסיכון, אסירים משוחררים ואנשים בתהליכי שיקום.</li>
+                <li>שילוב בקהילה, תעסוקה וליווי אישי.</li>
+                <li>ראייה של כל אדם – כולל פוטנציאל וצמיחה.</li>
+            </ul>
+        </div>
+
+        <div class="plan-item">
+            <h2>9. ממשל נקי, שקוף ומסור לציבור</h2>
+            <ul>
+                <li>חקיקת חוקי שקיפות וניגוד עניינים.</li>
+                <li>קיצוץ בכפולות, בזבוזים ופריבילגיות.</li>
+                <li>שירות ציבורי – שליחות אמיתית.</li>
+            </ul>
+        </div>
+
+        <div class="plan-item">
+            <h2>10. זהות יהודית וערכים אוניברסליים</h2>
+            <ul>
+                <li>חיזוק הזהות היהודית, המסורת והמורשת.</li>
+                <li>כבוד לכל אדם באשר הוא – מתוך ערכי היהדות.</li>
+                <li>שילוב בין אמונה, מדע, חדשנות ויצירתיות.</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-text">
+            אהבת חינם – זו הדרך. זה הכוח. זה העתיד שלנו.
+        </div>
+        <div class="footer-card">
+            <img src="https://i.ibb.co/GfmhbmfF/Whats-Ap-p-Image-2026-08-05-at-14-03-05-1.jpg" alt="אהבת חינם" class="footer-image">
+        </div>
+    </footer>
+
+</body>
+</html>
