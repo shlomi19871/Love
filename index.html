@@ -321,9 +321,14 @@
         @media (max-width: 768px) {
             .container { padding: 2rem 1rem; }
             nav a { margin: 0 0.5rem; font-size: 1rem; }
-            .gif-overlay-text { font-size: 1.5rem; }
+            .gif-overlay-text { font-size: 1.05rem; top: 3%; width: 92%; line-height: 1.35; }
+            .gif-overlay-emphasis { font-size: 1.15em; }
             .cta-title { font-size: 1.8rem; }
             .party-logo { width: 95px; top: 0.5rem; right: 0.5rem; }
+        }
+
+        @media (max-width: 400px) {
+            .gif-overlay-text { font-size: 0.85rem; line-height: 1.3; }
         }
     </style>
 </head>
@@ -363,20 +368,25 @@
     </div>
 
     <script>
-        // חותך את ה-GIF ומציג רק פס אמצעי: מתחיל קצת לפני הדגל (בלי השמיים),
-        // ומסתיים בערך בגובה הישבן (בלי הרגליים)
+        // חותך את ה-GIF ומציג פס אמצעי. במחשב מתחילים קצת לפני הדגל,
+        // ובנייד משאירים יותר שמיים כדי שהטקסט לא יכסה את האנשים
         (function () {
             const banner = document.getElementById('gifBanner');
             const img = document.getElementById('gifImage');
+            const MOBILE_BREAKPOINT = 768;
 
-            // אחוזים מגובה התמונה המקורית - אפשר לכוונן
-            const TOP_CUT = 0.22;    // כמה חותכים מלמעלה (שמיים)
-            const BOTTOM_CUT = 0.68; // עד כאן משאירים (68% מהגובה = בערך גובה הישבן)
+            function getCuts() {
+                if (window.innerWidth <= MOBILE_BREAKPOINT) {
+                    return { top: 0.04, bottom: 0.62 }; // יותר שמיים בנייד = מקום לטקסט
+                }
+                return { top: 0.22, bottom: 0.68 }; // מחשב
+            }
 
             function cropBand() {
                 if (!img.naturalWidth || !img.naturalHeight) return;
                 const ratio = img.naturalHeight / img.naturalWidth;
                 const fullHeight = banner.offsetWidth * ratio;
+                const { top: TOP_CUT, bottom: BOTTOM_CUT } = getCuts();
 
                 img.style.height = fullHeight + 'px';
                 img.style.top = (-fullHeight * TOP_CUT) + 'px';
